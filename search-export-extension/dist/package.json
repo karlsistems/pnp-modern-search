@@ -1,0 +1,31 @@
+{
+  "name": "search-export-extension",
+  "version": "1.0.0",
+  "description": "Export and filter controls extension for PnP Modern Search",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {
+    "@microsoft/sp-core-library": "^1.18.0",
+    "@microsoft/sp-lodash-subset": "^1.18.0",
+    "@microsoft/sp-property-pane": "^1.18.0",
+    "@microsoft/sp-webpart-base": "^1.18.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "@fluentui/react": "^8.106.4",
+    "xlsx": "^0.18.5",
+    "file-saver": "^2.0.5",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.31"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.45",
+    "@types/react-dom": "17.0.17",
+    "@types/file-saver": "^2.0.5",
+    "typescript": "4.7.4",
+    "rimraf": "^3.0.2"
+  }
+}
