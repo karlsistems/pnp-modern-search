@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.18.0",
+    "libraryName": "search-export-extension",
+    "libraryId": "893d948a-f7e9-4f16-b0e7-8f4c3a6889d2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "search-export-extension",
+    "solutionShortDescription": "Export and filter controls extension for PnP Modern Search",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "library"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "bundles": {
+    "search-export-extension": {
+      "dependencies": [
+        {
+          "componentId": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+          "componentName": "react",
+          "componentVersion": "17.0.1",
+          "isDirectDependency": true
+        },
+        {
+          "componentId": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+          "componentName": "react-dom",
+          "componentVersion": "17.0.1",
+          "isDirectDependency": true
+        }
+      ],
+      "asyncChunks": {}
+    }
+  }
+}

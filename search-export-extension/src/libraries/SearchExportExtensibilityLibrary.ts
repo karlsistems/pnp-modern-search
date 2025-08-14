@@ -8,8 +8,9 @@ import {
 } from '../models/ExtensibilityModels';
 import { ExportButtonsWebComponent } from '../webComponents/ExportButtons/ExportButtonsWebComponent';
 import { FilterControlsWebComponent } from '../webComponents/FilterControls/FilterControlsWebComponent';
-import { EnhancedResultsLayout } from '../layouts/EnhancedResultsLayout/EnhancedResultsLayout';
-import { EnhancedFiltersLayout } from '../layouts/EnhancedFiltersLayout/EnhancedFiltersLayout';
+// Layout classes are referenced in the array below
+// import { EnhancedResultsLayout } from '../layouts/EnhancedResultsLayout/EnhancedResultsLayout';
+// import { EnhancedFiltersLayout } from '../layouts/EnhancedFiltersLayout/EnhancedFiltersLayout';
 
 // Template content as strings
 const enhancedResultsTemplate = `<div class="enhanced-results-layout">

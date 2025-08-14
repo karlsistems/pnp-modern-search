@@ -1,0 +1,44 @@
+{
+  "id": "893d948a-f7e9-4f16-b0e7-8f4c3a6889d2",
+  "alias": "SearchExportExtensibilityLibrary",
+  "componentType": "Library",
+  "version": "1.0.0",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Advanced"
+      },
+      "title": {
+        "default": "Search Export & Filter Controls Extension"
+      },
+      "description": {
+        "default": "Provides export functionality and filter control buttons for PnP Modern Search"
+      },
+      "officeFabricIconFontName": "Export",
+      "properties": {}
+    }
+  ],
+  "loaderConfig": {
+    "internalModuleBaseUrls": [],
+    "entryModuleId": "search-export-extension",
+    "scriptResources": {
+      "search-export-extension": {
+        "type": "path",
+        "path": "search-export-extension_1823418baaad5bf6e6ba.js"
+      },
+      "react": {
+        "type": "component",
+        "id": "0d910c1c-13b9-4e1c-9aa4-b008c5e42d7d",
+        "version": "17.0.1"
+      },
+      "react-dom": {
+        "type": "component",
+        "id": "aa0a46ec-1505-43cd-a44a-93f3a5aa460a",
+        "version": "17.0.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/library-component-manifest.schema.json",
+  "id": "893d948a-f7e9-4f16-b0e7-8f4c3a6889d2",
+  "alias": "SearchExportExtensibilityLibrary",
+  "componentType": "Library",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Advanced"
+      },
+      "title": {
+        "default": "Search Export & Filter Controls Extension"
+      },
+      "description": {
+        "default": "Provides export functionality and filter control buttons for PnP Modern Search"
+      },
+      "officeFabricIconFontName": "Export",
+      "properties": {}
+    }
+  ]
+}

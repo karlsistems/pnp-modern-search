@@ -22,3 +22,4 @@ export declare abstract class BaseWebComponent extends HTMLElement {
      */
     protected setProperty(name: string, value: any): void;
 }
+//# sourceMappingURL=BaseWebComponent.d.ts.map

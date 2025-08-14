@@ -7,3 +7,4 @@ export interface IFilterControlsProps {
     applyButtonText?: string;
 }
 export declare const FilterControlsComponent: React.FC<IFilterControlsProps>;
+//# sourceMappingURL=FilterControlsComponent.d.ts.map

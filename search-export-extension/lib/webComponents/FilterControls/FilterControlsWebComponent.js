@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,29 +13,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -73,12 +49,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FilterControlsWebComponent = void 0;
-var React = __importStar(require("react"));
-var ReactDOM = __importStar(require("react-dom"));
-var BaseWebComponent_1 = require("../BaseWebComponent");
-var FilterControlsComponent_1 = require("./FilterControlsComponent");
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { BaseWebComponent } from '../BaseWebComponent';
+import { FilterControlsComponent } from './FilterControlsComponent';
 var FilterControlsWebComponent = /** @class */ (function (_super) {
     __extends(FilterControlsWebComponent, _super);
     function FilterControlsWebComponent() {
@@ -102,11 +76,12 @@ var FilterControlsWebComponent = /** @class */ (function (_super) {
                         console.log('Apply filters clicked');
                     }
                 };
-                ReactDOM.render(React.createElement(FilterControlsComponent_1.FilterControlsComponent, props), this);
+                ReactDOM.render(React.createElement(FilterControlsComponent, props), this);
                 return [2 /*return*/];
             });
         });
     };
     return FilterControlsWebComponent;
-}(BaseWebComponent_1.BaseWebComponent));
-exports.FilterControlsWebComponent = FilterControlsWebComponent;
+}(BaseWebComponent));
+export { FilterControlsWebComponent };
+//# sourceMappingURL=FilterControlsWebComponent.js.map

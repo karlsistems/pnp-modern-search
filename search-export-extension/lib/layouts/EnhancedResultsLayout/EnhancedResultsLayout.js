@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EnhancedResultsLayout = void 0;
 var EnhancedResultsLayout = /** @class */ (function () {
     function EnhancedResultsLayout() {
         // Simplified constructor
@@ -46,4 +43,5 @@ var EnhancedResultsLayout = /** @class */ (function () {
     };
     return EnhancedResultsLayout;
 }());
-exports.EnhancedResultsLayout = EnhancedResultsLayout;
+export { EnhancedResultsLayout };
+//# sourceMappingURL=EnhancedResultsLayout.js.map

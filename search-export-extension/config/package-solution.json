@@ -1,30 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "search-export-extension",
+    "name": "PnP Search Export Extension",
     "id": "893d948a-f7e9-4f16-b0e7-8f4c3a6889d2",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "developer": {
-      "name": "Your Organization",
-      "websiteUrl": "https://www.yourorganization.com",
+      "name": "PnP Community",
+      "websiteUrl": "https://github.com/microsoft-search/pnp-modern-search",
       "privacyUrl": "",
       "termsOfUseUrl": "",
       "mpnId": ""
     },
     "metadata": {
       "shortDescription": {
-        "default": "Export and filter controls extension for PnP Modern Search"
+        "default": "Export to Excel/CSV/PDF and filter controls for PnP Modern Search"
       },
       "longDescription": {
-        "default": "Adds export to Excel/CSV/PDF functionality and Clear All/Apply filter buttons to PnP Modern Search web parts"
+        "default": "Adds export functionality (Excel, CSV, PDF) and filter control buttons (Clear All, Apply) to PnP Modern Search web parts. Includes custom layouts and web components."
       },
       "screenshotPaths": [],
       "videoUrl": "",
       "categories": []
-    }
+    },
+    "features": [
+      {
+        "title": "Search Export Extension Library",
+        "description": "Library containing export and filter controls",
+        "id": "4d5a7a45-6b7e-4f3a-8d9c-2e1f3b4c5a6d",
+        "version": "1.0.0.0"
+      }
+    ]
   },
   "paths": {
     "zippedPackage": "solution/search-export-extension.sppkg"

@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EnhancedFiltersLayout = void 0;
 var EnhancedFiltersLayout = /** @class */ (function () {
     function EnhancedFiltersLayout() {
         // Simplified constructor
@@ -34,4 +31,5 @@ var EnhancedFiltersLayout = /** @class */ (function () {
     };
     return EnhancedFiltersLayout;
 }());
-exports.EnhancedFiltersLayout = EnhancedFiltersLayout;
+export { EnhancedFiltersLayout };
+//# sourceMappingURL=EnhancedFiltersLayout.js.map

@@ -5,3 +5,4 @@ export interface IExportButtonsProps {
     title?: string;
 }
 export declare const ExportButtonsComponent: React.FC<IExportButtonsProps>;
+//# sourceMappingURL=ExportButtonsComponent.d.ts.map

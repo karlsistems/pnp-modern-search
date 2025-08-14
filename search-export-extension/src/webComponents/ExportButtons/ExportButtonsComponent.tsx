@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
-import { IconButton, IContextualMenuProps, IContextualMenuItem, Stack, Label } from '@fluentui/react';
+import { IconButton, IContextualMenuProps } from '@fluentui/react';
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 import jsPDF from 'jspdf';

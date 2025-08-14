@@ -1,0 +1,47 @@
+<div class="enhanced-filters-layout">
+    <div class="filters-header" style="margin-bottom: 15px;">
+        <h3>Filters</h3>
+    </div>
+    
+    <div class="filter-controls">
+        <pnp-filter-controls 
+            show-apply-button="true"
+            clear-button-text="Clear All"
+            apply-button-text="Apply Filters">
+        </pnp-filter-controls>
+    </div>
+    
+    <div class="filters-container" style="margin-top: 15px;">
+        {{#each filters}}
+            <div class="filter-group" style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 10px;">{{displayName}}</h4>
+                
+                {{#if values}}
+                    <div class="filter-values">
+                        {{#each values}}
+                            <div class="filter-item" style="margin-bottom: 5px;">
+                                <label style="display: flex; align-items: center;">
+                                    <input 
+                                        type="checkbox" 
+                                        name="{{../name}}" 
+                                        value="{{value}}"
+                                        {{#if selected}}checked{{/if}}
+                                        style="margin-right: 8px;"
+                                    />
+                                    <span>{{name}} ({{count}})</span>
+                                </label>
+                            </div>
+                        {{/each}}
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+    
+    <div class="filter-controls-bottom" style="margin-top: 20px; border-top: 1px solid #e1e1e1; padding-top: 15px;">
+        <pnp-filter-controls 
+            show-apply-button="false"
+            clear-button-text="Reset Filters">
+        </pnp-filter-controls>
+    </div>
+</div>

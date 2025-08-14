@@ -10,3 +10,4 @@ export declare class EnhancedFiltersLayout {
     getPropertyPaneFieldsConfiguration(availableFields: string[]): IPropertyPaneField<any>[];
     onPropertyUpdate(propertyPath: string, oldValue: any, newValue: any): void;
 }
+//# sourceMappingURL=EnhancedFiltersLayout.d.ts.map

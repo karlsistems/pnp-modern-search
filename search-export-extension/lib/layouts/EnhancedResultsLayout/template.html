@@ -1,0 +1,51 @@
+<div class="enhanced-results-layout">
+    <div class="export-controls" style="text-align: right; margin-bottom: 15px;">
+        <pnp-export-buttons 
+            items="{{JSONstringify items}}" 
+            selected-fields='["Title", "Path", "Author", "Modified"]'
+            title="Search Results">
+        </pnp-export-buttons>
+    </div>
+    
+    <div class="results-container">
+        {{#if items.length}}
+            <div class="results-count" style="margin-bottom: 10px;">
+                <strong>{{items.length}} results found</strong>
+            </div>
+            
+            <div class="results-list">
+                {{#each items}}
+                    <div class="result-item" style="padding: 15px; border: 1px solid #e1e1e1; margin-bottom: 10px; border-radius: 4px;">
+                        <h3 style="margin-top: 0;">
+                            {{#if Path}}
+                                <a href="{{Path}}" target="_blank">{{Title}}</a>
+                            {{else}}
+                                {{Title}}
+                            {{/if}}
+                        </h3>
+                        
+                        {{#if HitHighlightedSummary}}
+                            <div class="summary" style="margin: 10px 0;">
+                                {{{HitHighlightedSummary}}}
+                            </div>
+                        {{/if}}
+                        
+                        <div class="metadata" style="color: #666; font-size: 0.9em;">
+                            {{#if Author}}
+                                <span>By: {{Author}}</span> | 
+                            {{/if}}
+                            {{#if Modified}}
+                                <span>Modified: {{getDate Modified "LL"}}</span>
+                            {{/if}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{else}}
+            <div class="no-results" style="text-align: center; padding: 40px;">
+                <h3>No results found</h3>
+                <p>Try adjusting your search terms or filters</p>
+            </div>
+        {{/if}}
+    </div>
+</div>

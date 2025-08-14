@@ -1,39 +1,10 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ExportButtonsComponent = void 0;
-var React = __importStar(require("react"));
-var react_1 = require("@fluentui/react");
-var XLSX = __importStar(require("xlsx"));
-var file_saver_1 = require("file-saver");
-var jspdf_1 = __importDefault(require("jspdf"));
-var jspdf_autotable_1 = __importDefault(require("jspdf-autotable"));
-var ExportButtonsComponent = function (props) {
+import * as React from 'react';
+import { IconButton } from '@fluentui/react';
+import * as XLSX from 'xlsx';
+import { saveAs } from 'file-saver';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
+export var ExportButtonsComponent = function (props) {
     var items = props.items, selectedFields = props.selectedFields, _a = props.title, title = _a === void 0 ? 'Search Results' : _a;
     var exportToExcel = function () {
         if (!items || items.length === 0) {
@@ -58,7 +29,7 @@ var ExportButtonsComponent = function (props) {
         // Generate Excel file
         var excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
         var data = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        (0, file_saver_1.saveAs)(data, "".concat(title, "_").concat(new Date().toISOString().split('T')[0], ".xlsx"));
+        saveAs(data, "".concat(title, "_").concat(new Date().toISOString().split('T')[0], ".xlsx"));
     };
     var exportToCSV = function () {
         if (!items || items.length === 0) {
@@ -81,7 +52,7 @@ var ExportButtonsComponent = function (props) {
         var csv = XLSX.utils.sheet_to_csv(ws);
         // Save CSV file
         var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        (0, file_saver_1.saveAs)(blob, "".concat(title, "_").concat(new Date().toISOString().split('T')[0], ".csv"));
+        saveAs(blob, "".concat(title, "_").concat(new Date().toISOString().split('T')[0], ".csv"));
     };
     var exportToPDF = function () {
         if (!items || items.length === 0) {
@@ -89,7 +60,7 @@ var ExportButtonsComponent = function (props) {
             return;
         }
         // Create PDF document
-        var doc = new jspdf_1.default();
+        var doc = new jsPDF();
         // Add title
         doc.setFontSize(16);
         doc.text(title, 14, 15);
@@ -111,7 +82,7 @@ var ExportButtonsComponent = function (props) {
             });
         });
         // Add table to PDF
-        (0, jspdf_autotable_1.default)(doc, {
+        autoTable(doc, {
             head: [headers],
             body: data,
             startY: 30,
@@ -144,7 +115,7 @@ var ExportButtonsComponent = function (props) {
         ]
     };
     return (React.createElement("div", { className: "export-buttons-container", style: { display: 'inline-block' } },
-        React.createElement(react_1.IconButton, { iconProps: { iconName: 'Download' }, title: "Export Results", ariaLabel: "Export Results", menuProps: menuProps, styles: {
+        React.createElement(IconButton, { iconProps: { iconName: 'Download' }, title: "Export Results", ariaLabel: "Export Results", menuProps: menuProps, styles: {
                 root: {
                     backgroundColor: '#0078d4',
                     color: 'white'
@@ -155,4 +126,4 @@ var ExportButtonsComponent = function (props) {
                 }
             } })));
 };
-exports.ExportButtonsComponent = ExportButtonsComponent;
+//# sourceMappingURL=ExportButtonsComponent.js.map

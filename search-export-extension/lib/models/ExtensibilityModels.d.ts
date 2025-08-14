@@ -40,3 +40,4 @@ export interface IQueryModifierDefinition {
     key: string;
     serviceKey: any;
 }
+//# sourceMappingURL=ExtensibilityModels.d.ts.map

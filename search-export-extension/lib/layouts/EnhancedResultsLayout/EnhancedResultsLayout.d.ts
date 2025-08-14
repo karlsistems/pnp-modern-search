@@ -11,3 +11,4 @@ export declare class EnhancedResultsLayout {
     getPropertyPaneFieldsConfiguration(availableFields: string[]): IPropertyPaneField<any>[];
     onPropertyUpdate(propertyPath: string, oldValue: any, newValue: any): void;
 }
+//# sourceMappingURL=EnhancedResultsLayout.d.ts.map

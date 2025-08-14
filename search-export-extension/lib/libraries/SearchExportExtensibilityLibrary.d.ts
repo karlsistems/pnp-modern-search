@@ -30,3 +30,4 @@ export declare class SearchExportExtensibilityLibrary implements IExtensibilityL
      */
     getCustomQueryModifiers(): IQueryModifierDefinition[];
 }
+//# sourceMappingURL=SearchExportExtensibilityLibrary.d.ts.map
